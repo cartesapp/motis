@@ -1,0 +1,20 @@
+{
+  "name": "cartes-motis",
+  "version": "0.0.1",
+  "description": "If not the first setup time, run :",
+  "scripts": {
+    "build": "./setup.sh",
+    "start": "./motis/motis --server.port $PORT",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laem/motis.git"
+  },
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/laem/motis/issues"
+  },
+  "homepage": "https://github.com/laem/motis#readme"
+}
