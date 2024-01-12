@@ -43,4 +43,4 @@ profile=motis/tiles-profiles/background.lua
 EOT
 
 # Start MOTIS
-./motis/motis --server.port 3000
+./motis/motis --server.port $PORT
