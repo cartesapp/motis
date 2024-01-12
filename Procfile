@@ -1,1 +1,1 @@
-web: ./setup.sh
+web: deno run --allow-net --allow-env --allow-run server.ts
