@@ -1,5 +1,10 @@
 #!/bin/sh
 
+curl -fsSL https://deno.land/install.sh | sh
+
+# setup a temporary server while motis is being set up
+deno run --allow-net --allow-env server.ts
+
 rm -rf config.ini motis* data/*
 
 TARGET="linux-amd64"
