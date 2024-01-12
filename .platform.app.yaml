@@ -15,9 +15,9 @@ type: "nodejs:20"
 # application container. The 'source_path' specifies the subdirectory
 # from within the source that the mount should point at.
 mounts:
-  "web/uploads":
+  "monmount":
     source: local
-    source_path: uploads
+    source_path: ""
 
 # The size of the persistent disk of the application (in MB).
 disk: 4096
@@ -26,4 +26,8 @@ web:
   commands:
     start: "npm run start"
 hooks:
-  build: "npm run build"
+  build: |
+    npm run build
+    mv data tmp/data
+  deploy: |
+    cp -r tmp/data monmount
