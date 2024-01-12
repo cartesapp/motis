@@ -24,4 +24,6 @@ disk: 4096
 
 web:
   commands:
-    start: "./motis/motis --server.port 3000"
+    start: "npm run start"
+hooks:
+  build: "npm run build"
