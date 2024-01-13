@@ -6,6 +6,7 @@
 # this is pure hack
 # timeout 30 deno run --allow-net --allow-env server.ts
 
+# Remove old build data
 rm -rf config.ini motis* data/*
 
 TARGET="linux-amd64"
@@ -33,13 +34,15 @@ modules=nigiri
 intermodal.router=nigiri
 server.static_path=motis/web
 dataset.no_schedule=true
+nigiri.num_days=14
 
 [import]
 paths=schedule-bretagne:input/bretagne.gtfs.zip
+paths=schedule-pdll:input/pays-de-la-loire.gtfs.zip
 paths=schedule-ter:input/ter.gtfs.zip
 paths=schedule-intercites:input/intercites.gtfs.zip
 paths=schedule-tgv:input/tgv.gtfs.zip
-paths=osm:input/bretagne.osm.pbf
+paths=osm:input/ouest.osm.pbf
 
 [ppr]
 profile=motis/ppr-profiles/default.json

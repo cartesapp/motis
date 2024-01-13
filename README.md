@@ -24,6 +24,16 @@ Then to just run in one second the server,
 
 Motis startup should take 1 second :)
 
+## About osm files 
+
+There should be only one import osm path. 
+
+In case you want to include multiple French regions, e.g. run : 
+```
+cd input
+osmium merge bretagne.osm.pbf pays-de-la-loire.osm.pbf -o ouest.osm.pbf
+```
+
 ## Deploying
 
 I've not yet been able to find an easy to use PaaS platform letting me deploy this.

@@ -4,3 +4,4 @@ motis/
 input/
 !input/.gitkeep
 config.ini
+logs.txt
