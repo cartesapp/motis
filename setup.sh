@@ -27,7 +27,6 @@ tar xf motis-${TARGET}.tar.bz2
 cat <<EOT >> config.ini
 modules=intermodal
 modules=address
-modules=tiles
 modules=ppr
 modules=nigiri
 
@@ -47,8 +46,6 @@ paths=osm:input/ouest.osm.pbf
 [ppr]
 profile=motis/ppr-profiles/default.json
 
-[tiles]
-profile=motis/tiles-profiles/background.lua
 EOT
 
 echo "Will first launch motis"
