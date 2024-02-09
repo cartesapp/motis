@@ -83,3 +83,15 @@ server {
 ```
 
 Then follow the setup above.
+
+Run the server with
+
+```
+systemctl start motis.service
+```
+
+Read the last logs with
+
+```
+journalctl -u motis.service -b -e
+```
