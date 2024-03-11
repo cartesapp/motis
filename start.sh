@@ -1,2 +1,1 @@
-/root/motis/motis/motis --server.port 3000 
-
+./motis/motis --server.port 3001
