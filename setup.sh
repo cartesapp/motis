@@ -11,6 +11,7 @@ rm -rf config.ini motis* data/*
 
 ./downloadMotis.sh
 ./downloadGtfs.sh
+./downloadOsm.sh
 
 
 # Write config.ini

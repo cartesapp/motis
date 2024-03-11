@@ -1,8 +1,10 @@
-If not the first setup time, run :
+If not the first setup time, optionally run this command to start from scratch (will be slower, obviously) :
 
 ```
 rm -rf config.ini motis* data/*
 ```
+
+> Important note : motis config.ini generation and GTFS downloading has been moved to laem/gtfs
 
 Then
 
@@ -24,14 +26,15 @@ Then to just run in one second the server,
 
 Motis startup should take 1 second :)
 
-## About osm files 
+## About osm files
 
-There should be only one import osm path. 
+There should be only one import osm path.
 
-In case you want to include multiple French regions, e.g. run : 
+In case you want to include multiple French regions, e.g. run :
+
 ```
 cd input
-osmium merge bretagne.osm.pbf pays-de-la-loire.osm.pbf -o ouest.osm.pbf
+osmium merge bretagne.osm.pbf pays-de-la-loire.osm.pbf -o cartes.osm.pbf
 ```
 
 ## Deploying
