@@ -4,7 +4,7 @@ If not the first setup time, optionally run this command to start from scratch (
 rm -rf config.ini motis* data/*
 ```
 
-> Important note : motis config.ini generation and GTFS downloading has been moved to laem/gtfs
+> 🆕 Important note : motis config.ini generation and GTFS downloading has been moved to laem/gtfs
 
 Then
 
@@ -33,6 +33,7 @@ There should be only one import osm path.
 In case you want to include multiple French regions, e.g. run :
 
 ```
+sudo apt install osmium-tool
 cd input
 osmium merge bretagne.osm.pbf pays-de-la-loire.osm.pbf -o cartes.osm.pbf
 ```
