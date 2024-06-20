@@ -96,5 +96,5 @@ systemctl start motis.service
 Read the last logs with
 
 ```
-journalctl -u motis.service -b -e
+journalctl -u motis.service -b -e -f
 ```
