@@ -4,7 +4,7 @@ If not the first setup time, optionally run this command to start from scratch (
 rm -rf config.ini motis* data/*
 ```
 
-Important note : motis config.ini generation and GTFS downloading has been moved to laem/gtfs, fully automatised with the deno buildConfig.ts script :) 
+Important note : motis config.ini generation and GTFS downloading has been moved to laem/gtfs, fully automatised with the deno buildConfig.ts script :)
 
 ## About osm files
 
@@ -19,7 +19,9 @@ cd input
 osmium merge bretagne.osm.pbf pays-de-la-loire.osm.pbf -o cartes.osm.pbf
 ```
 
-The thing is, it's resource hungry to load the osrm and ppr motis modules. But it's entirely possible to produce them locally then upload them on the server in data/osrm/*. 
+The thing is, it's resource hungry to parse the osrm and ppr motis modules's data. But it's entirely possible to produce them locally then upload them on the server in data/osrm/\*.
+
+Just beware to also upload the hashes in import.ini and make sure the x.osm.pbf in input/ is the same as the one you generated your osrm and ppr files from.
 
 Then to just run in one second the server,
 
@@ -28,7 +30,6 @@ Then to just run in one second the server,
 ```
 
 Motis startup should take 1 minute max if no osrm or ppr parsing is done :)
-
 
 ## Deploying
 
