@@ -4,27 +4,7 @@ If not the first setup time, optionally run this command to start from scratch (
 rm -rf config.ini motis* data/*
 ```
 
-> 🆕 Important note : motis config.ini generation and GTFS downloading has been moved to laem/gtfs
-
-Then
-
-```
-./downloadGtfs.sh
-```
-
-Then, setup Motis, it should take < 1 minute on an i7 16 Go laptop.
-
-```
-./setup.sh
-```
-
-Then to just run in one second the server,
-
-```
-./motis/motis --server.port 3000
-```
-
-Motis startup should take 1 second :)
+Important note : motis config.ini generation and GTFS downloading has been moved to laem/gtfs, fully automatised with the deno buildConfig.ts script :) 
 
 ## About osm files
 
@@ -33,10 +13,22 @@ There should be only one import osm path.
 In case you want to include multiple French regions, e.g. run :
 
 ```
+./downloadOsm.sh
 sudo apt install osmium-tool
 cd input
 osmium merge bretagne.osm.pbf pays-de-la-loire.osm.pbf -o cartes.osm.pbf
 ```
+
+The thing is, it's resource hungry to load the osrm and ppr motis modules. But it's entirely possible to produce them locally then upload them on the server in data/osrm/*. 
+
+Then to just run in one second the server,
+
+```
+./start.sh.
+```
+
+Motis startup should take 1 minute max if no osrm or ppr parsing is done :)
+
 
 ## Deploying
 
