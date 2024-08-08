@@ -1,3 +1,9 @@
+```
+./downloadMotis.sh
+```
+
+Beware, the Scaleway elastic metal needs the motis-linux-amd64-noavx.tar.bz2 build !
+
 If not the first setup time, optionally run this command to start from scratch (will be slower, obviously) :
 
 ```
@@ -79,7 +85,12 @@ server {
 
 ```
 
-Then follow the setup above.
+Add Motis as a system service :
+
+```
+sudo cp motis.service /etc/systemd/system/
+
+```
 
 Run the server with
 

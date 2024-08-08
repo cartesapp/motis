@@ -1,0 +1,11 @@
+[Unit]
+Description=Motis
+
+[Service]
+ExecStart=/home/ubuntu/motis/start.sh
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
+
